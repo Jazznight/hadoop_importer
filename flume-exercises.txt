@@ -1,5 +1,5 @@
 ﻿//Retrieve log generator from GitHub
-wget https://github.com/Jazznight/hadoop_importer/raw/master/Flume/log-generator.py
+wget https://github.com/Jazznight/hadoop_importer/raw/master/flume/log-generator.py
 
 //Use log-generator.py to generate log
 python log-generator.py
@@ -8,8 +8,8 @@ python log-generator.py
 tail -F /tmp/log-generator.log
 
 //Retrieve agent configs from GitHub
-wget https://github.com/Jazznight/hadoop_importer/raw/master/Flume/agent2.properties
-wget https://github.com/Jazznight/hadoop_importer/raw/master/Flume/agent1.properties
+wget https://github.com/Jazznight/hadoop_importer/raw/master/flume/agent2.properties
+wget https://github.com/Jazznight/hadoop_importer/raw/master/flume/agent1.properties
 
 //Start flume-1 agent and flume-2 agent
 flume-ng agent --conf-file agent2.properties --name agent2
